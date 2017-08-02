@@ -1,0 +1,12 @@
+.my-modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(5,5,5,0.5);
+  display: none;
+}
+.show{
+  display: block;
+}

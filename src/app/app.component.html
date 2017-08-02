@@ -1,3 +1,78 @@
-<h1>
-  {{title}}
-</h1>
+<div *ngIf="selectedAccount">
+  <div class="container">
+    <div class="row">
+      <h1>
+        Bank Account managment
+      </h1>
+      <p>
+        welcome: {{selectedAccount.name}}
+      </p>
+
+      <div class="chosing account">
+        <h2>Choose Account:</h2>
+        <div>
+          <app-account-table [Acounts]="selectedAccount"></app-account-table>
+          <!--<div class="row">-->
+          <!--<div class="col-lg-12">-->
+          <!--<div class="panel panel-default">-->
+          <!--<div class="panel-heading">-->
+          <!--DataTables Advanced Tables-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /.panel-heading &ndash;&gt;-->
+          <!--<div class="panel-body">-->
+          <!--<table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">-->
+          <!--<thead>-->
+          <!--<tr>-->
+          <!--<th>Type</th>-->
+          <!--<th>Id</th>-->
+          <!--<th>Balance</th>-->
+
+          <!--</tr>-->
+          <!--</thead>-->
+          <!--<tbody *ngFor="let currentAcount of selectedAccount.currentAccount">-->
+          <!--<tr class="gradeU">-->
+          <!--<td>Current</td>-->
+          <!--<td>{{currentAcount.id}}</td>-->
+          <!--<td>{{currentAcount.balance}}</td>-->
+          <!--<td>-->
+          <!--<button>Deposit</button>-->
+          <!--</td>-->
+          <!--<td>-->
+          <!--<button>Withdraw</button>-->
+          <!--</td>-->
+          <!--</tr>-->
+          <!--</tbody>-->
+          <!--<tbody *ngFor="let currentAcount of selectedAccount.savingAccount">-->
+          <!--<tr class="gradeU">-->
+          <!--<td>Saving</td>-->
+          <!--<td>{{currentAcount.id}}</td>-->
+          <!--<td>{{currentAcount.balance}}</td>-->
+          <!--<td>-->
+          <!--<button>Open</button>-->
+          <!--<app-saving-accout [savingAccount]="currentAcount"></app-saving-accout>-->
+          <!--</td>-->
+          <!--<td>-->
+          <!--<button>History</button>-->
+          <!--</td>-->
+          <!--</tr>-->
+          <!--</tbody>-->
+
+          <!--</table>-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /.panel-body &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /.panel &ndash;&gt;-->
+          <!--</div>-->
+          <!--&lt;!&ndash; /.col-lg-12 &ndash;&gt;-->
+          <!--</div>-->
+
+        </div>
+      </div>
+
+      <!--<app-current-account *ngIf="selectedAccountType == 'current'"-->
+      <!--[currentAccount]="selectedAccount.currentAccount"></app-current-account>-->
+      <!--<app-saving-accout *ngIf="selectedAccountType == 'saving'"-->
+      <!--[savingAccount]="selectedAccount.savingAccount"></app-saving-accout>-->
+    </div>
+  </div>
+</div>

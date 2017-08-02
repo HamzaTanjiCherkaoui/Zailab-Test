@@ -1,0 +1,22 @@
+<div class="col-lg-6">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Date</th>
+        <th>Type</th>
+        <th>Amount</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="success" *ngFor="let event of history"
+          [ngClass]="{'success': event.type == 'deposit','warning': event.type == 'withdraw'}">
+        <td>{{event.date | date: 'medium'}}</td>
+        <td>{{event.type}}</td>
+        <td>R{{event.amount}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

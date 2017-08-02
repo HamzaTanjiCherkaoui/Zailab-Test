@@ -1,0 +1,15 @@
+<div class="operation">
+  <h2>Operation:</h2>
+  <div>
+    <div class="deposit">
+      <h3>Deposit</h3>
+      <input [(ngModel)]="depositAmount" min="1000" type="number">
+      <button (click)="deposit(depositAmount)">Deposit</button>
+    </div>
+    <div class="">
+      <h3>withdraw</h3>
+      <input [(ngModel)]="withdrawalAmount" min="0" type="number">
+      <button (click)="withdraw(withdrawalAmount)">Withdraw</button>
+    </div>
+  </div>
+</div>
